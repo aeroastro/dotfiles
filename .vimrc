@@ -1,20 +1,26 @@
-" Setting for Program
-set fileencodings=utf8,iso-2022-jp,cp932,euc-jp
-set backspace=indent,eol,start
+set nocompatible " Say Good Bye to vi
 
 " Using NeoBundle
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-
-call neobundle#rc(expand('~/.vim.bundle.')) " 上のifの中？[TBD]
+call neobundle#rc(expand('~/.vim.bundle.')) " 
 
 " Plugins
+
+
+" Every Time in Use 
 NeoBundle 'petdance/vim-perl'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neocomplcache'
 
+
 filetype plugin indent on
+
+" Setting for Program
+set fileencodings=utf8,iso-2022-jp,cp932,euc-jp
+set backspace=indent,eol,start
+
 
 " For US Keyboards
 noremap ; :
