@@ -33,6 +33,6 @@ vim -c 'NeoBundleInstall!' -c quit
 
 # Change Git Settings
 cd ~/dotfiles
-git config user.name AeroAstro
-git config user.email AeroAstro
+git config user.name aeroastro
+git config user.email aeroastro
 git config color.ui auto
