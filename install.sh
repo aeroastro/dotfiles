@@ -1,4 +1,4 @@
-nstall Modules
+# Install Modules
 if [ `uname` = "Darwin" ]; then
     brew install bash-completion
 elif [ `uname` = "Linux" ]; then
@@ -24,9 +24,15 @@ do
     ln -s $HOME/dotfiles/$file $HOME/$file
 done
 
-# Update Neobundle
-if [ ! -d $HOME/.vim/bundle ]; then
-    git submodule init
-    git submodule update
+# Install neobundle.vim
+if [ ! -d ~/.vim/bundle ]; then
+    mkdir -p ~/.vim/bundle
+    git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 fi
+vim -c 'NeoBundleInstall!' -c quit
 
+# Change Git Settings
+cd ~/dotfiles
+git config user.name AeroAstro
+git config user.email AeroAstro
+git config color.ui auto
