@@ -1,9 +1,9 @@
 # Install Modules
-if [ `uname` = "Darwin" ]; then
-    brew install bash-completion
-elif [ `uname` = "Linux" ]; then
-    sudo yum install bash-completion
-fi
+#if [ `uname` = "Darwin" ]; then
+#    brew install bash-completion
+#elif [ `uname` = "Linux" ]; then
+#    sudo yum install bash-completion
+#fi
 
 
 # Create symbolic links
@@ -25,10 +25,11 @@ do
 done
 
 # Install neobundle.vim
-if [ ! -d ~/.vim/bundle ]; then
+if [ -d ~/.vim/bundle ]; then
+    rm -rf ~/.vim/bundle
+fi
     mkdir -p ~/.vim/bundle
     git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-fi
 vim -c 'NeoBundleInstall!' -c quit
 
 # Change Git Settings
