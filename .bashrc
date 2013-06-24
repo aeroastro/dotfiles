@@ -5,6 +5,7 @@
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias ls='ls --color'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
