@@ -23,8 +23,8 @@ set backspace=indent,eol,start
 
 
 " For US Keyboards
-noremap ; :
-noremap : ;
+" noremap ; :
+" noremap : ;
 
 " Input
 set autoindent
