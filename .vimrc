@@ -19,8 +19,9 @@ NeoBundle 'scrooloose/nerdtree'
 " List subroutines and variables
 NeoBundle 'vim-scripts/taglist.vim'
 " tags
-NeoBundle 'vim-scripts/Source-Explorer-srcexpl.vim'
-NeoBundle 'vim-scripts/trinity.vim'
+NeoBundle 'vim-scripts/SrcExpl'
+NeoBundle 'vim-scripts/Trinity'
+NeoBundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
 
@@ -49,9 +50,13 @@ set shiftwidth=4
 
 "---- Display -----"
 set number
-"set ruler
+set ruler
 set laststatus=2
 syntax on
+set background=dark
+" colorscheme solarized
+"
+"
 "set list
 set showmatch
 set hlsearch  "HighLight
@@ -61,9 +66,10 @@ set fdm=indent "Open All by zR
 
 "---- CursorLine ----"
 set cursorline
-
-
-
+"set cursorcolumn
+"highlight CursorLine   cterm=NONE ctermbg=
+"highlight CursorColumn cterm=NONE ctermbg=dark
+set background=dark
 
 " Vim Tips
 "
