@@ -4,7 +4,7 @@ set nocompatible " Say Good Bye to vi
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim.bundle.')) " 
+call neobundle#rc(expand('~/.vim/bundle/')) " 
 
 " Plugins
 
@@ -14,8 +14,19 @@ NeoBundle 'petdance/vim-perl'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neocomplcache'
 
+" Show Directories
+NeoBundle 'scrooloose/nerdtree'
+" List subroutines and variables
+NeoBundle 'vim-scripts/taglist.vim'
+" tags
+NeoBundle 'vim-scripts/Source-Explorer-srcexpl.vim'
+NeoBundle 'vim-scripts/trinity.vim'
 
 filetype plugin indent on
+
+
+" Start With IDE Mode unless Files specified
+autocmd vimenter * if !argc() | NERDTree | endif
 
 " Setting for Program
 set fileencodings=utf8,iso-2022-jp,cp932,euc-jp

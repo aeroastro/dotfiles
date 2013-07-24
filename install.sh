@@ -1,9 +1,21 @@
 # Install Modules
 #if [ `uname` = "Darwin" ]; then
 #    brew install bash-completion
-#elif [ `uname` = "Linux" ]; then
-#    sudo yum install bash-completion
-#fi
+
+
+# Installing Process
+if [ `uname` = "Linux" ]; then
+    # Ctags 5.8
+    mkdir -p $HOME/local/bin
+    mkdir -p $HOME/local/src
+    cd $HOME/local/src/
+
+    wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
+    tar zxf ctags-5.8.tar.gz
+    cd ctags-5.8
+    ./configure --prefix=$HOME/local
+    sudo make install
+fi
 
 
 # Create symbolic links
