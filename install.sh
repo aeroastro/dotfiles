@@ -49,3 +49,9 @@ cd ~/dotfiles
 git config user.name aeroastro
 git config user.email aeroastro
 git config color.ui auto
+
+
+
+# Show Messages
+echo "Install Completed";
+echo "Access https://gist.github.com/masaakif/414375 and Update Nerd Tree";

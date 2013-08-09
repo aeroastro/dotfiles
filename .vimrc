@@ -16,12 +16,15 @@ NeoBundle 'Shougo/neocomplcache'
 
 " Show Directories
 NeoBundle 'scrooloose/nerdtree'
+" NeoBundle 'scrooloose/grep_menuitem.vim'
 " List subroutines and variables
 NeoBundle 'vim-scripts/taglist.vim'
 " tags
 NeoBundle 'vim-scripts/SrcExpl'
 NeoBundle 'vim-scripts/Trinity'
-NeoBundle 'altercation/vim-colors-solarized'
+"NeoBundle 'altercation/vim-colors-solarized'
+
+NeoBundle 'thinca/vim-quickrun'
 
 filetype plugin indent on
 
@@ -57,6 +60,9 @@ set background=dark
 " colorscheme solarized
 "
 "
+
+set wildmenu
+
 "set list
 set showmatch
 set hlsearch  "HighLight
@@ -73,3 +79,6 @@ set background=dark
 
 " Vim Tips
 "
+"
+" Option to Include Another Files
+source ~/.local.vimrc
