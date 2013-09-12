@@ -78,7 +78,26 @@ set cursorline
 set background=dark
 
 " Vim Tips
-"
+:nnoremap <M-Right> :bn<CR>
+:nmap <M-Left> :bp<CR>
+
+"------ Like IDE --------"
+" F7 to Compile the File
+:nmap <F7> :make<CR><CR>
+" F5 to Run
+:nmap <F5> :QuickRun<CR>
+
+
+" color
+"hi Pmenu ctermbg=7
+
+
+
+"------ Perl Specific Area -----"
+let g:perl_compiler_force_warnings=0
+autocmd FileType perl :compiler perl
+autocmd FileType perl :nmap <S-F5> :!perl %
+
 "
 " Option to Include Another Files
 source ~/.local.vimrc
