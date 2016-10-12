@@ -1,0 +1,7 @@
+[user]
+    name = aeroastro
+    email = aeroastro@users.noreply.github.com
+[push]
+    default = simple
+[alias]
+    pr-to = "! f() { hub compare $1...$(git rev-parse --abbrev-ref HEAD); }; f"
