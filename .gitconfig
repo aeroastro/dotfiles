@@ -5,7 +5,7 @@
     default = simple
 [alias]
     pr-to = "! f() { hub compare $1...$(git rev-parse --abbrev-ref HEAD); }; f"
-
+    graph = log --graph --oneline --all --decorate
 #driver for merging Xcode project files
 [mergetool "mergepbx"]
     cmd = mergepbx "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
