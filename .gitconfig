@@ -9,3 +9,5 @@
 #driver for merging Xcode project files
 [mergetool "mergepbx"]
     cmd = mergepbx "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
+[include]
+    path = .gitconfig.local
