@@ -1,0 +1,13 @@
+# http://EditorConfig.org
+root = true
+
+# Default Settings
+[*]
+indent_style = space
+indent_size = 4
+
+[*.rb]
+indent_size = 2
+
+[*.js,*.json]
+indent_size = 2
