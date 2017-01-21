@@ -11,3 +11,10 @@ indent_size = 2
 
 [*.js,*.json]
 indent_size = 2
+
+[*.sh,.bashrc,bash_profile]
+indent_size = 2
+
+# EditorConfig
+[.editorconfig]
+indent_size = 2
