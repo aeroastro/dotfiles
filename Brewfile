@@ -19,6 +19,7 @@ brew 'sqlite3'
 # Editors and IDEs
 brew 'vim'
 cask 'atom'
+brew 'editorconfig'
 
 # Communication Tools
 
