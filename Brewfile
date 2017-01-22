@@ -1,27 +1,27 @@
-# Make sure using the latest Homebrew
-update
+cask_args appdir: '/Applications'
 
-# Update already-installed formula
-upgrade
+tap 'caskroom/cask'
 
-# Packages
-install git
-install hub
+# Utilities
+brew 'ag'
+brew 'peco'
 
-install tmux
-install ag
+# SCM
+brew 'git'
+brew 'hub'
 
 # Databases
-install mysql
-install elasticsearch
-install sqlite3
+brew 'mysql', restart_service: true, conflicts_with: ['homebrew/versions/mysql56']
+brew 'elasticsearch'
+brew 'redis'
+brew 'sqlite3'
 
-# Editors
-install vim
+# Editors and IDEs
+brew 'vim'
+cask 'atom'
 
-# .dmg
+# Communication Tools
+
+# Some softwares via cask
 # cask install google-chrome
 # cask install virtualbox
-
-# Remove outdated versions
-cleanup
