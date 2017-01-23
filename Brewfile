@@ -17,7 +17,7 @@ brew 'redis'
 brew 'sqlite3'
 
 # Editors and IDEs
-brew 'vim'
+brew 'vim', args: ['with-lua']
 cask 'atom'
 brew 'editorconfig'
 
