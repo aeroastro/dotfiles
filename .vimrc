@@ -33,13 +33,18 @@ call dein#begin('~/.vim/dein/')
 call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
+call dein#add('Shougo/neocomplete')
 call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('scrooloose/nerdtree')
 call dein#add('editorconfig/editorconfig-vim')
 
+call dein#add('altercation/vim-colors-solarized')
+call dein#add('tomasr/molokai')
+call dein#add('nanotech/jellybeans.vim')
+
 " You can specify revision/branch/tag.
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+" call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
 " Required:
 call dein#end()
@@ -55,6 +60,8 @@ endif
 "End dein Scripts-------------------------
 
 " TODO: Integrate this to editorconfig
+
+colorscheme jellybeans
 
 " Initialization
 autocmd vimenter * if !argc() | NERDTree | endif
