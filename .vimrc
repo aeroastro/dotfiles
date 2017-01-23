@@ -52,15 +52,25 @@ set cindent
 set expandtab
 set tabstop=4
 set shiftwidth=4
-
-set wildmenu
-set hlsearch
-set showmatch " parentheses
-
 set fdm=indent
 
-set backspace=indent,eol,start
+set laststatus=2
+set wildmenu
+
+set hlsearch
+set incsearch
+set showmatch " parentheses
+
+set backspace=indent,eol,start " Allow backspace in insert mode
+set ttyfast " Optimize for fast terminal connections
+
 set mouse=a
+set ruler
+set scrolloff=3
+
+" show “invisible” characters
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set list
 
 " Initialization
 autocmd vimenter * if !argc() | NERDTree | endif
