@@ -3,6 +3,9 @@ root = true
 
 # Default Settings
 [*]
+charset = utf-8
+end_of_lines = lf
+trim_trailing_whitespace = true
 indent_style = space
 indent_size = 4
 
@@ -15,6 +18,5 @@ indent_size = 2
 [*.sh,.bashrc,bash_profile]
 indent_size = 2
 
-# EditorConfig
 [.editorconfig]
 indent_size = 2
