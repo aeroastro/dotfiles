@@ -11,7 +11,7 @@ brew 'git'
 brew 'hub'
 
 # Databases
-brew 'mysql', restart_service: true, conflicts_with: ['homebrew/versions/mysql56']
+brew 'mysql', restart_service: true, conflicts_with: ['homebrew/versions/mysql56', 'mysql56-with-q4m']
 brew 'elasticsearch'
 brew 'redis'
 brew 'sqlite3'
