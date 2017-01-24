@@ -72,6 +72,12 @@ set scrolloff=3
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
 
+" ----- File Detection ----- "
+" this could be merged into extended editorconfig. Does it exist?
+ augroup FileTypeDetect
+   autocmd BufRead,BufNewFile *.schema setfiletype ruby
+ augroup END
+
 " ----- Binary Editing Mode ----- "
 augroup BinaryXXD
   autocmd!
