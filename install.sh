@@ -22,7 +22,7 @@ set -eu
 
 
 # Create symbolic links
-FILES=(.vimrc)
+FILES=(.vimrc .editorconfig)
 
 for file in ${FILES[@]}
 do
