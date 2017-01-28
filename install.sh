@@ -48,7 +48,7 @@ else
   mkdir -p $DEIN_PLUGIN_DIR
   git clone https://github.com/Shougo/dein.vim.git $DEIN_PLUGIN_DIR
 fi
-bash -c "vim --cmd 'dein#install()'"
+bash -c "vim -c 'qall'" # Load .vimrc and trigger dein install
 
 
 # Show Messages
