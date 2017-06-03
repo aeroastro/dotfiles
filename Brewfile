@@ -5,6 +5,7 @@ tap 'caskroom/cask'
 # Utilities
 brew 'ag'
 brew 'peco'
+brew 'pstree'
 
 # SCM
 brew 'git'
