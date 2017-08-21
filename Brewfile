@@ -7,6 +7,13 @@ brew 'ag'
 brew 'peco'
 brew 'pstree'
 
+# Language
+brew 'lua'
+brew 'go'
+
+# Build Tools
+brew 'cmake'
+
 # SCM
 brew 'git'
 brew 'hub'
