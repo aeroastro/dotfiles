@@ -2,17 +2,34 @@ cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
 
-# Utilities
-brew 'ag'
+# Terminal Utilities
+brew 'tmux'
+
+# CLI Text Utilities
+brew "the_silver_searcher"
 brew 'peco'
 brew 'pstree'
+brew 'coreutils'
+brew 'nkf'
+brew 'colordiff'
 
-# Language
+# Documentation
+brew 'doxygen'
+
+# Graphical Tools
+brew 'graphviz'
+brew 'plantuml'
+
+# Programming Language
 brew 'lua'
 brew 'go'
 
 # Build Tools
 brew 'cmake'
+brew 'gradle'
+
+# Debugging
+brew 'gdb'
 
 # SCM
 brew 'git'
@@ -21,20 +38,33 @@ brew 'hub'
 # Binary
 brew 'binutils'
 
-# Databases
+# Serialization
+brew 'protobuf'
+brew 'jq'
+
+# Databases and so on
 brew 'mysql'
 brew 'postgresql'
 brew 'elasticsearch'
 brew 'redis'
-brew 'sqlite3'
+brew 'memcached'
+brew 'sqlite'
 
 # Editors and IDEs
 brew 'vim', args: ['with-lua']
-cask 'atom'
 brew 'editorconfig'
 
-# Communication Tools
+# External Services
+brew 'awscli'
 
-# Some softwares via cask
-# cask install google-chrome
-# cask install virtualbox
+# Cask Application
+cask 'atom'
+
+# Mac AppStore
+mas "LimeChat", id: 414030210
+mas "Slack", id: 803453959
+mas "Xcode", id: 497799835
+mas "YubiKey Personalization Tool", id: 638161122
+
+# Human
+# Karabiner: https://github.com/tekezo/Karabiner-Elements/blob/master/usage/README.md
