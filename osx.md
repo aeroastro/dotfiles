@@ -17,3 +17,8 @@ All the steps written here must be migrated into some script
   * Privacy: Remove noisy directories from Spotlight
 * Notification
   * Set notification style on each application
+
+# Minimum Software
+
+* Git
+  * Install git via Xcode command line developer tools.
