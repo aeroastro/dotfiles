@@ -53,6 +53,7 @@ brew 'sqlite'
 # Editors and IDEs
 brew 'vim', args: ['with-lua']
 brew 'editorconfig'
+brew 'ctags'
 
 # External Services
 brew 'awscli'
