@@ -23,6 +23,7 @@ brew 'plantuml'
 # Programming Language
 brew 'lua'
 brew 'go'
+cask 'java'
 
 # Build Tools
 brew 'cmake'
