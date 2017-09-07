@@ -1,25 +1,13 @@
 #!/bin/bash
 set -eu
 
-# Install Modules
-#if [ `uname` = "Darwin" ]; then
-#    brew install bash-completion
-
-
-# Installing Process
-# if [ `uname` = "Linux" ]; then
-#     # Ctags 5.8
-#     mkdir -p $HOME/local/bin
-#     mkdir -p $HOME/local/src
-#     cd $HOME/local/src/
-# 
-#     wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
-#     tar zxf ctags-5.8.tar.gz
-#     cd ctags-5.8
-#     ./configure --prefix=$HOME/local
-#     sudo make install
-# fi
-
+# install Brewfile
+echo "Installing Homebrew https://brew.sh/"
+if [ ! brew ]; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+brew update
+brew bundle
 
 # Create symbolic links
 FILES=(.vimrc .editorconfig .bashrc .bash_profile)
@@ -50,6 +38,20 @@ else
 fi
 bash -c "vim -c 'qall'" # Load .vimrc and trigger dein install
 
+echo "Installing pyenv https://github.com/pyenv/pyenv"
+echo "Installing virtualenv https://github.com/pyenv/pyenv-virtualenv"
+PYENV_ROOT=~/.pyenv
+if [ -d $PYENV_ROOT ]; then
+  git clone https://github.com/pyenv/pyenv $PYENV_DIR
+  git clone https://github.com/pyenv/pyenv-virtualenv.git $PYENV_DIR/plugins/pyenv-virtualenv
+fi
+
+echo "Installing Android Studio (Not Implemented now)"
+
+echo "Install git completions"
+if [ ! -d ~/dotfiles/repos/git ]; then
+  git clone https://github.com/git/git.git ~/dotfiles/repos/git
+fi
 
 # Show Messages
 echo "Install Completed";
