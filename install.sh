@@ -3,9 +3,8 @@ set -eu
 
 # install Brewfile
 echo "Installing Homebrew https://brew.sh/"
-if [ ! brew ]; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew analytics off
 brew update
 brew bundle
 
