@@ -69,4 +69,6 @@ mas "Xcode", id: 497799835
 mas "YubiKey Personalization Tool", id: 638161122
 
 # Human
-# Karabiner: https://github.com/tekezo/Karabiner-Elements/blob/master/usage/README.md
+# Karabiner: https://github.com/tekezo/Karbiner-Elements/blob/master/usage/README.md
+# Google IME: https://www.google.co.jp/ime/
+# Iterm2 https://www.iterm2.com/
