@@ -13,17 +13,17 @@ brew 'coreutils'
 brew 'nkf'
 brew 'colordiff'
 
+# Programming Language
+cask 'java'
+brew 'lua'
+brew 'go'
+
 # Documentation
 brew 'doxygen'
 
 # Graphical Tools
 brew 'graphviz'
 brew 'plantuml'
-
-# Programming Language
-brew 'lua'
-brew 'go'
-cask 'java'
 
 # Build Tools
 brew 'cmake'
