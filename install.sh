@@ -38,18 +38,54 @@ fi
 bash -c "vim -c 'qall'" # Load .vimrc and trigger dein install
 
 echo "Installing pyenv https://github.com/pyenv/pyenv"
-echo "Installing virtualenv https://github.com/pyenv/pyenv-virtualenv"
 PYENV_ROOT=~/.pyenv
 if [ -d $PYENV_ROOT ]; then
-  git clone https://github.com/pyenv/pyenv $PYENV_DIR
-  git clone https://github.com/pyenv/pyenv-virtualenv.git $PYENV_DIR/plugins/pyenv-virtualenv
+  (cd $PYENV_ROOT && git pull)
+else
+  git clone https://github.com/pyenv/pyenv $PYENV_ROOT
+fi
+
+echo "Installing virtualenv https://github.com/pyenv/pyenv-virtualenv"
+VIRTUAL_ENV_ROOT=$PYENV_ROOT/plugins/pyenv-virtualenv
+if [ -d $VIRTUAL_ENV_ROOT ]; then
+  (cd $VIRTUAL_ENV_ROOT && git pull)
+else
+  git clone https://github.com/pyenv/pyenv-virtualenv.git $VIRTUAL_ENV_ROOT
+fi
+
+echo "Installing rbenv and ruby build"
+RBENV_ROOT=~/.rbenv
+if [ -d $RBENV_ROOT ]; then
+  (cd $RBENV_ROOT && git pull)
+else
+  git clone https://github.com/rbenv/rbenv.git $RBENV_ROOT
+fi
+RUBY_BUILD_ROOT=$RBENV_ROOT/plugins/ruby-build
+if [ -d $RUBY_BUILD_ROOT ]; then
+  (cd $RUBY_BUILD_ROOT && git pull)
+else
+  git clone https://github.com/rbenv/ruby-build.git $RUBY_BUILD_ROOT
+fi
+
+echo "Installing plenv"
+PLENV_ROOT=~/.plenv
+if [ -d $PLENV_ROOT ]; then
+  (cd $PLENV_ROOT && git pull)
+else
+  git clone https://github.com/tokuhirom/plenv.git $PLENV_ROOT
+fi
+PERL_BUILD_HOME=$PLENV_ROOT/.plenv/plugins/perl-build
+if [ -d $PERL_BUILD_HOME ]; then
+  (cd $PERL_BUILD_HOME && git pull)
+else
+  git clone https://github.com/tokuhirom/Perl-Build.git $PERL_BUILD_HOME
 fi
 
 echo "Installing Android Studio (Not Implemented now)"
 
 echo "Install git completions"
 if [ ! -d ~/dotfiles/repos/git ]; then
-  git clone https://github.com/git/git.git ~/dotfiles/repos/git
+  git clone --depth=1 https://github.com/git/git.git ~/dotfiles/repos/git
 fi
 
 # Show Messages
