@@ -1,3 +1,10 @@
+# TODO: Later section in this file should be integrated into global config
+
+# iTerm2 login command
+
+/etc/iterm2/login
+
+
 # For git
 .gitconfig.local
 
