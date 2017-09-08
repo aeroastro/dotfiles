@@ -18,7 +18,13 @@ All the steps written here must be migrated into some script
 * Notification
   * Set notification style on each application
 
-# Minimum Software
+# Install Softwares
 
-* Git
-  * Install git via Xcode command line developer tools.
+* `./install.sh`
+
+# Settings
+
+## iTerm2
+
+* General
+  * Load preferences from a custom folder or URL: ~/dotfiles/etc/iterm2
