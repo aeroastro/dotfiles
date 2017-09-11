@@ -17,6 +17,26 @@ All the steps written here must be migrated into some script
   * Privacy: Remove noisy directories from Spotlight
 * Notification
   * Set notification style on each application
+* Display
+  * Enable Night Shift
+* Energy Saver
+  * Do it.
+* Keyboard
+  * Key Repeat: Max repeats with second fastest repeat recognition.
+  * External Keyboard: Use function keys as ordinary function keys.
+* Mouse
+  * Scroll Direction: Not Natural
+* Trackpad
+  * Tap to click: Enabled
+* Printers & Scanners
+  * Do it.
+* Sound
+  * Do it.
+* Startup Disk
+  * Do it.
+
+* Accessibility
+  * Mouse & Trackpad > Trackpad Options > Enable Dragging with three finger drag
 
 # Install Softwares
 
