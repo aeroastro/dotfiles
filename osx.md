@@ -28,3 +28,5 @@ All the steps written here must be migrated into some script
 
 * General
   * Load preferences from a custom folder or URL: ~/dotfiles/etc/iterm2
+* Login command
+  * Write login command in ~/dotfiles/etc/iterm2/login
