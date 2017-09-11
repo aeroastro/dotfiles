@@ -4,6 +4,9 @@
 
 /etc/iterm2/login
 
+# external repositories
+/repos
+
 
 # For git
 .gitconfig.local
