@@ -9,13 +9,15 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 4
 
-[*.rb]
+[{*.rb,*.rake,*.schema,*.thor,Gemfile*}]
+indent_size = 2
+tab_width = 2
+vim_filetype = ruby
+
+[{*.js,*.json}]
 indent_size = 2
 
-[*.js,*.json]
-indent_size = 2
-
-[*.sh,.bashrc,bash_profile]
+[{*.sh,.bashrc,.bash_profile}]
 indent_size = 2
 
 [*.md]

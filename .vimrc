@@ -53,8 +53,8 @@ set number
 set cindent
 
 set expandtab
-set tabstop=4
-set shiftwidth=4
+" set tabstop=4
+" set shiftwidth=4
 set fdm=indent
 
 set laststatus=2
@@ -75,11 +75,16 @@ set scrolloff=3
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 " set list
 
-" ----- File Detection ----- "
-" this could be merged into extended editorconfig. Does it exist?
- augroup FileTypeDetect
-   autocmd BufRead,BufNewFile *.schema setfiletype ruby
- augroup END
+" ----- Syntax Detection by editorconfig-vim ----- "
+function! FiletypeHook(config)
+  if has_key(a:config, 'vim_filetype')
+    let &filetype = a:config['vim_filetype']
+  endif
+
+  return 0 " return 0 to snow no error happened
+endfunction
+
+call editorconfig#AddNewHook(function('FiletypeHook'))
 
 " ----- Binary Editing Mode ----- "
 augroup BinaryXXD
