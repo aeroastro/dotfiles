@@ -71,4 +71,5 @@ mas "YubiKey Personalization Tool", id: 638161122
 # Human
 # Karabiner: https://github.com/tekezo/Karbiner-Elements/blob/master/usage/README.md
 # Google IME: https://www.google.co.jp/ime/
-# Iterm2 https://www.iterm2.com/
+# Iterm2: https://www.iterm2.com/
+# Vagrant: https://www.vagrantup.com/downloads.html
