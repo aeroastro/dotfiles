@@ -1,12 +1,21 @@
 #!/bin/bash
 set -eu
 
+OS=`uname -s`
+
 # install Brewfile
-echo "Installing Homebrew https://brew.sh/"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew analytics off
-brew update
-brew bundle
+
+if [ "$OS" = "Darwin" ]; then
+  if ! which brew; then
+    echo "Installing Homebrew https://brew.sh/"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
+
+  echo "Updating Homebrew"
+  brew analytics off # Maybe we can on this.
+  brew update
+  brew bundle
+fi
 
 # Create symbolic links
 FILES=(.vimrc .editorconfig .bashrc .bash_profile)
@@ -74,18 +83,37 @@ if [ -d $PLENV_ROOT ]; then
 else
   git clone https://github.com/tokuhirom/plenv.git $PLENV_ROOT
 fi
-PERL_BUILD_HOME=$PLENV_ROOT/.plenv/plugins/perl-build
-if [ -d $PERL_BUILD_HOME ]; then
-  (cd $PERL_BUILD_HOME && git pull)
+PERL_BUILD_ROOT=$PLENV_ROOT/plugins/perl-build
+if [ -d $PERL_BUILD_ROOT ]; then
+  (cd $PERL_BUILD_ROOT && git pull)
 else
-  git clone https://github.com/tokuhirom/Perl-Build.git $PERL_BUILD_HOME
+  git clone https://github.com/tokuhirom/Perl-Build.git $PERL_BUILD_ROOT
+fi
+
+echo "Installing ndenv and node build"
+NDENV_ROOT=~/.ndenv
+if [ -d $NDENV_ROOT ]; then
+  (cd $NDENV_ROOT && git pull)
+else
+  git clone https://github.com/riywo/ndenv $NDENV_ROOT
+fi
+NODE_BUILD_ROOT=$NDENV_ROOT/plugins/node-build
+if [ -d $NODE_BUILD_ROOT ]; then
+  (cd $NODE_BUILD_ROOT && git pull)
+else
+  git clone https://github.com/riywo/node-build.git $NODE_BUILD_ROOT
 fi
 
 echo "Installing Android Studio (Not Implemented now)"
 
+echo "Installing relevant repositories"
+GIT_ROOT=~/dotfiles/repos/
 echo "Install git completions"
-if [ ! -d ~/dotfiles/repos/git ]; then
-  git clone --depth=1 https://github.com/git/git.git ~/dotfiles/repos/git
+GIT_COMPLETION_ROOT=$GIT_ROOT/git
+if [ -d $GIT_COMPLETION_ROOT ]; then
+  (cd $GIT_COMPLETION_ROOT && git pull)
+else
+  git clone --depth=1 https://github.com/git/git.git $GIT_COMPLETION_ROOT
 fi
 
 # Show Messages
