@@ -26,6 +26,7 @@ brew 'graphviz'
 brew 'plantuml'
 
 # Build Tools
+brew 'autoconf'
 brew 'cmake'
 brew 'gradle'
 
@@ -33,6 +34,7 @@ brew 'gradle'
 brew 'gdb'
 
 # SCM
+brew 'svn'
 brew 'git'
 brew 'hub'
 
@@ -55,6 +57,9 @@ brew 'sqlite'
 brew 'vim', args: ['with-lua']
 brew 'editorconfig'
 brew 'ctags'
+
+# Applications
+brew 'jenkins'
 
 # External Services
 brew 'awscli'
