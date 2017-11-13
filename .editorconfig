@@ -14,10 +14,16 @@ indent_size = 2
 tab_width = 2
 vim_filetype = ruby
 
+[*.slim]
+indent_size = 2
+
 [{*.js,*.json}]
 indent_size = 2
 
 [{*.sh,.bashrc,.bash_profile}]
+indent_size = 2
+
+[*.proto]
 indent_size = 2
 
 [*.md]
