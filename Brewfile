@@ -29,6 +29,7 @@ brew 'plantuml'
 brew 'autoconf'
 brew 'cmake'
 brew 'gradle'
+brew 'gradle-completion'
 
 # Debugging
 brew 'gdb'

@@ -87,3 +87,4 @@ function find-pr() {
 # The next line enables shell command completion for gcloud.
 # source ~/google-cloud-sdk/completion.bash.inc
 
+[ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
