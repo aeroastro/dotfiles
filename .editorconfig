@@ -9,7 +9,7 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 4
 
-[{*.rb,*.rake,*.schema,*.thor,Gemfile*}]
+[{*.rb,*.rake,*.schema,*.thor,Gemfile*,Rakefile}]
 indent_size = 2
 tab_width = 2
 vim_filetype = ruby
