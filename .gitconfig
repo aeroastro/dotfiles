@@ -1,17 +1,21 @@
 [user]
     name = aeroastro
-    email = aeroastro@users.noreply.github.com
+    email = aeroastro007@gmail.com
+[core]
+    editor = nvim
+    excludesfile = /Users/takumasa.ochi/.gitignore
 [push]
     default = simple
 [alias]
     pr-to = "! f() { hub compare $1...$(git rev-parse --abbrev-ref HEAD); }; f"
     graph = log --graph --oneline --all --decorate
-#driver for merging Xcode project files
 [mergetool "mergepbx"]
     cmd = mergepbx "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
 [merge "mergepbx"]
     name = Xcode project files merger
     driver = mergepbx %O %A %B
+[merge]
+    renamelimit = 20000
 [diff "json"]
     textconv = "perl -MEncode -MJSON -0e \"print encode('utf8', JSON->new->canonical->pretty->encode(decode_json(<>)))\""
 [include]
