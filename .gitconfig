@@ -16,7 +16,7 @@
     driver = mergepbx %O %A %B
 [merge]
     renamelimit = 20000
-[diff "json"]
-    textconv = "perl -MEncode -MJSON -0e \"print encode('utf8', JSON->new->canonical->pretty->encode(decode_json(<>)))\""
+# [diff "json"]
+#     textconv = "perl -MEncode -MJSON -0e \"print encode('utf8', JSON->new->canonical->pretty->encode(decode_json(<>)))\""
 [include]
     path = .gitconfig.local
