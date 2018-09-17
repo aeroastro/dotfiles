@@ -14,3 +14,6 @@ alias gp='git pull --prune'
 alias gs='git status'
 alias gco='git checkout'
 alias gsu='git submodule update --init --recursive --force'
+
+# neovim
+alias vim='nvim'

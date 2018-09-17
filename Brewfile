@@ -55,7 +55,7 @@ brew 'memcached'
 brew 'sqlite'
 
 # Editors and IDEs
-brew 'vim', args: ['with-lua']
+brew 'neovim'
 brew 'editorconfig'
 brew 'ctags'
 
