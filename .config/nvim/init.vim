@@ -84,7 +84,7 @@ function! FiletypeHook(config)
   return 0 " return 0 to snow no error happened
 endfunction
 
-" call editorconfig#AddNewHook(function('FiletypeHook'))
+call editorconfig#AddNewHook(function('FiletypeHook'))
 
 " ----- Binary Editing Mode ----- "
 augroup BinaryXXD
