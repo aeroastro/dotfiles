@@ -15,15 +15,13 @@ export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+export LC_ALL=ja_JP.UTF-8 # https://github.com/pypa/pipenv/issues/187#issuecomment-375172264
+export LANG=ja_JP.UTF-8
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH";
 eval "$(rbenv init -)"
 source "$HOME/.rbenv/completions/rbenv.bash"
-
-# ndenv
-export PATH="$HOME/.ndenv/bin:$PATH"
-eval "$(ndenv init -)"
 
 # go
 export GOPATH=$(go env GOPATH)
@@ -82,9 +80,11 @@ function find-pr() {
 # Google Cloud SDK
 
 # The next line updates PATH for the Google Cloud SDK.
-# source ~/google-cloud-sdk/path.bash.inc
+source ~/google-cloud-sdk/path.bash.inc
 
 # The next line enables shell command completion for gcloud.
-# source ~/google-cloud-sdk/completion.bash.inc
+source ~/google-cloud-sdk/completion.bash.inc
 
 [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
+# export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
