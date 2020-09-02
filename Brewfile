@@ -65,6 +65,9 @@ brew 'jenkins'
 # External Services
 brew 'awscli'
 
+# ~env
+brew 'nodenv'
+
 # Cask Application
 cask 'atom'
 
