@@ -32,5 +32,8 @@ indent_size = 2
 [*.yml]
 indent_size = 2
 
+[*.java]
+indent_size = 2
+
 [.editorconfig]
 indent_size = 2

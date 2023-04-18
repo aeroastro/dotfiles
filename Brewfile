@@ -1,6 +1,6 @@
 cask_args appdir: '/Applications'
 
-tap 'caskroom/cask'
+tap 'homebrew/cask'
 
 # Terminal Utilities
 brew 'tmux'
@@ -14,9 +14,16 @@ brew 'nkf'
 brew 'colordiff'
 
 # Programming Language
-cask 'java'
 brew 'lua'
 brew 'go'
+brew 'openjdk'
+
+# ~env
+brew 'rbenv'
+brew 'nodenv'
+
+# lint
+brew 'hadolint'
 
 # Documentation
 brew 'doxygen'
@@ -30,6 +37,7 @@ brew 'autoconf'
 brew 'cmake'
 brew 'gradle'
 brew 'gradle-completion'
+brew 'act'
 
 # Debugging
 brew 'gdb'
@@ -72,10 +80,10 @@ brew 'nodenv'
 cask 'atom'
 
 # Mac AppStore
-mas "LimeChat", id: 414030210
 mas "Slack", id: 803453959
 mas "Xcode", id: 497799835
 mas "YubiKey Personalization Tool", id: 638161122
+mas "BetterSnapTool", id: 417375580
 
 # Human
 # Karabiner: https://github.com/tekezo/Karbiner-Elements/blob/master/usage/README.md

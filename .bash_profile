@@ -23,6 +23,10 @@ export PATH="$HOME/.rbenv/bin:$PATH";
 eval "$(rbenv init -)"
 source "$HOME/.rbenv/completions/rbenv.bash"
 
+# nodenv
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
 # go
 export GOPATH=$(go env GOPATH)
 export PATH="$GOPATH/bin:$PATH"
@@ -86,5 +90,32 @@ source ~/google-cloud-sdk/path.bash.inc
 source ~/google-cloud-sdk/completion.bash.inc
 
 [ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
-# export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+# export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+source "$HOME/.cargo/env"
+
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+
+export DOTNET_CLI_TELEMETRY_OPTOUT=true
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/usr/local/opt/openjdk@17/bin:$PATH"
+
+
+# dotnet
+
+# bash parameter completion for the dotnet CLI
+
+function _dotnet_bash_complete()
+{
+  local cur="${COMP_WORDS[COMP_CWORD]}" IFS=$'\n'
+  local candidates
+
+  read -d '' -ra candidates < <(dotnet complete --position "${COMP_POINT}" "${COMP_LINE}" 2>/dev/null)
+
+  read -d '' -ra COMPREPLY < <(compgen -W "${candidates[*]:-}" -- "$cur")
+}
+
+complete -f -F _dotnet_bash_complete dotnet
